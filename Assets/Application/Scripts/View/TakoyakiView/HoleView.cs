@@ -2,38 +2,48 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UniRx;
 
-public class HoleView : MonoBehaviour
-{
-    public Sprite spriteKara;
-    public Sprite sprite1;
-    
-    public int s = 0;
-    enum State{
-        blank, rare, medium, welldone
+public class HoleView : MonoBehaviour{
+    public TakoyakiModel takoyaki;
+    public Image holeImege;
+    public Sprite blank;
+    public Sprite rare;
+    public Sprite medium;
+    public Sprite welldone;
+
+    static public HoleView Instantiate(GameObject prefab, GameObject parent, TakoyakiModel takoyaki) {
+        HoleView obj = Instantiate(prefab, parent.transform).GetComponent<HoleView>();
+        obj.takoyaki = takoyaki;
+        return obj;
     }
-    public State state = State.blank;
-    
-    public void changeSprite(){
-        switch(State){
-            case State.blank:
-                this.gameObject.GetComponent<Image> ().sprite = sprite1;
-                break;
-            case State.rare:
-                this.gameObject.GetComponent<Image> ().sprite = spriteKara;
-                break;
-            case State.medium:
-                
-            case State.welldone:
-                
-        }    
-            
-        if (s%2==0){
-            this.gameObject.GetComponent<Image> ().sprite = sprite1;
-            s += 1;
-        }else if(s%2==1){
-            this.gameObject.GetComponent<Image> ().sprite = spriteKara;
-            s += 1;
-        }
+
+    private void Start(){
+        takoyaki.ObserveEveryValueChanged(x => x.bakeState)
+                .Subscribe(_ => this.ChangeSprite());
     }
+
+    public void ChangeSprite(){
+        switch (takoyaki.bakeState) {
+            case TakoyakiModel.BakeState.blank:
+                holeImege.sprite = blank;
+                break;
+            case TakoyakiModel.BakeState.rare:
+                holeImege.sprite = rare;
+                break;
+            case TakoyakiModel.BakeState.medium:
+                holeImege.sprite = medium;
+                break;
+            case TakoyakiModel.BakeState.welldone:
+                holeImege.sprite = welldone;
+                break;
+            default:
+                break;
+         }
+    }
+
+    public void EkiDropEvent(){
+        TakoyakiViewModel.instance.IntoTakoyakiEki(this.takoyaki);
+    }
+
 }

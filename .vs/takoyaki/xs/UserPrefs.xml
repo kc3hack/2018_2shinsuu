@@ -1,0 +1,16 @@
+﻿<Properties StartupConfiguration="{6A52E00F-6B7B-E2C7-B2D0-C0FE4C9A9069}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Application/Scripts/ViewModel/TakoyakiViewModel.cs">
+    <Files>
+      <File FileName="Assets/Application/Scripts/Model/TakoyakiModel/TakoyakiModel.cs" Line="7" Column="13" />
+      <File FileName="Assets/Application/Scripts/ViewModel/TakoyakiViewModel.cs" Line="12" Column="29" />
+      <File FileName="Assets/Application/Scripts/View/TakoyakiView/HoleView.cs" Line="37" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
