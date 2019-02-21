@@ -184,6 +184,8 @@ MonoBehaviour:
   rare: {fileID: 21300000, guid: 257e601fa1944bf91aad5021d5564d51, type: 3}
   medium: {fileID: 21300000, guid: cfd88ee0175d690d2b39688cc5920517, type: 3}
   welldone: {fileID: 21300000, guid: fb3825687391c4d14afbb24e00f7c1f4, type: 3}
+  tako: {fileID: 21300000, guid: 6bd110f0c0e8646a1af7d92f67da7edc, type: 3}
+  takoIn: {fileID: 21300000, guid: cd0714955d2804d9ab7d37da9e118a64, type: 3}
 --- !u!114 &8417325496356603809
 MonoBehaviour:
   m_ObjectHideFlags: 0

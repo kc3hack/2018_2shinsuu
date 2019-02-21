@@ -54,4 +54,13 @@ public class TakoyakiViewModel : SingletonMonoBehaviour<TakoyakiViewModel>{
         }
     }
 
+    public void Shot(Vector3 acceleration, TakoyakiModel takoyaki) {
+        if(takoyaki.bakeState == TakoyakiModel.BakeState.medium && takoyaki.isInTako){
+            PopTakoyakiBall.instance.Shot(acceleration);
+        }
+        takoyaki.bakeState = TakoyakiModel.BakeState.blank;
+        takoyaki.isInTako = false;
+        takoyaki.bakeTime = 0f;
+    }
+
 }

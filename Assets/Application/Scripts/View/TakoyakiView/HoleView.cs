@@ -15,6 +15,9 @@ public class HoleView : MonoBehaviour{
     public Sprite medium;
     public Sprite welldone;
 
+    public Sprite tako;
+    public Sprite takoIn;
+
     static public HoleView Instantiate(GameObject prefab, GameObject parent, TakoyakiModel takoyaki) {
         HoleView obj = Instantiate(prefab, parent.transform).GetComponent<HoleView>();
         obj.takoyaki = takoyaki;
@@ -23,10 +26,10 @@ public class HoleView : MonoBehaviour{
 
     private void Start(){
         takoyaki.ObserveEveryValueChanged(x => x.bakeState)
-                .Subscribe(_ => this.ChangeSprite());
+                .Subscribe(_ => this.refresh());
 
         takoyaki.ObserveEveryValueChanged(x => x.isInTako)
-                .Subscribe(_ => this.ChengeInTako());
+                .Subscribe(_ => this.refresh());
 
         dropAttribute.dropEventSubject.Subscribe(DropEvent);
         flickAttrubute.flickEventSubject.Subscribe(FlickEvent);
@@ -51,6 +54,36 @@ public class HoleView : MonoBehaviour{
          }
     }
 
+    public void refresh()
+    {
+        switch (takoyaki.bakeState)
+        {
+            case TakoyakiModel.BakeState.blank:
+                holeImege.sprite = blank;
+                break;
+            case TakoyakiModel.BakeState.rare:
+                holeImege.sprite = rare;
+                break;
+            case TakoyakiModel.BakeState.medium:
+                holeImege.sprite = medium;
+                break;
+            case TakoyakiModel.BakeState.welldone:
+                holeImege.sprite = welldone;
+                break;
+            default:
+                break;
+        }
+        if(takoyaki.bakeState != TakoyakiModel.BakeState.blank)
+        {
+            takoImage.sprite = takoIn;
+        }
+        else
+        {
+            takoImage.sprite = tako;
+        }
+        takoImage.enabled = takoyaki.isInTako;
+    }
+
     public void ChengeInTako() {
         takoImage.enabled = takoyaki.isInTako;
      }
@@ -66,6 +99,6 @@ public class HoleView : MonoBehaviour{
     }
 
     public void FlickEvent(Vector3 acceleration){
-        PopTakoyakiBall.instance.Shot(acceleration);
+        TakoyakiViewModel.instance.Shot(acceleration, this.takoyaki);
     }
 }

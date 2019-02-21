@@ -4,12 +4,22 @@ using UnityEngine;
 using DG.Tweening;
 public class ObatyanActor : MonoBehaviour
 {
-    public int HP = 1;
+    public string obatyanType;
+    public MeshRenderer renderer;
 
     // Start is called before the first frame update
     void Start()
     {
+
+    }
+
+    void OnEnable()
+    {
         DOVirtual.DelayedCall(30f, () => Death());
+        if(StegeObserver.instance.target.CurrentStatus == Vuforia.TrackableBehaviour.Status.NO_POSE)
+        {
+            renderer.enabled = false;
+        }
     }
 
     // Update is called once per frame
