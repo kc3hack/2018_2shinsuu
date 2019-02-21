@@ -249,7 +249,6 @@ GameObject:
   - component: {fileID: 6925688473844471260}
   - component: {fileID: 6925688473844471259}
   - component: {fileID: 6925688473844471258}
-  - component: {fileID: 6925688473844471257}
   - component: {fileID: 6925688473844471256}
   m_Layer: 5
   m_Name: Button
@@ -356,18 +355,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &6925688473844471257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6925688473844471238}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fca4389dfa405448abb485ecba6ae04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6925688473844471256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,8 +372,8 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 6925688473920034086}
-          m_MethodName: Touch
+        - m_Target: {fileID: 6925688473920034104}
+          m_MethodName: Close
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -410,8 +397,6 @@ GameObject:
   - component: {fileID: 6925688473920034083}
   - component: {fileID: 6925688473920034085}
   - component: {fileID: 6925688473920034084}
-  - component: {fileID: 6925688473920034086}
-  - component: {fileID: 6925688473920034087}
   - component: {fileID: 6925688473920034104}
   m_Layer: 5
   m_Name: Obatyan
@@ -471,7 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.6156863}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -487,30 +472,6 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
---- !u!114 &6925688473920034086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6925688473920034082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fca4389dfa405448abb485ecba6ae04, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6925688473920034087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6925688473920034082}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f7567f778cdf534baf97900c8cc9bf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &6925688473920034104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -523,7 +484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f8c2cbc225b61c48994e4c6d8dc0c3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: {fileID: 6925688474188041390}
+  nameText: {fileID: 6925688474188041390}
   image: {fileID: 6925688475236827190}
   getCountText: {fileID: 6925688474678710685}
   place: {fileID: 6925688474642596997}
@@ -531,7 +492,7 @@ MonoBehaviour:
   discription:
   - {fileID: 6925688474614498594}
   - {fileID: 6925688475260946458}
-  - {fileID: 6925688473407443744}
+  - {fileID: 6925688473813709167}
 --- !u!1 &6925688474188041388
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +764,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 350, y: -708.7999}
+  m_AnchoredPosition: {x: 350, y: -728.51}
   m_SizeDelta: {x: 400, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6925688474678710686

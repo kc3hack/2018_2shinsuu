@@ -1,31 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class setsumei : MonoBehaviour
 {
-
-    // Use this for initialization
-    void Start()
+    public ObatyanModel obatyan;
+    public Image icon;
+    public Text place;
+    private void Start()
     {
-
+        this.init();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void init()
     {
+        this.icon.sprite = Resources.Load<Sprite>(obatyan.spritePath);
+        this.place.text = obatyan.place;
 
     }
 
-    public void Touch()
+    public void Taped()
     {
-        gameObject.SetActive(true);
+        ObatyanListViewModel.instance.OpenObatyanView(this.obatyan);
     }
-
-    public void getObatyanDis() {
-        /*foreach (Obatyan oba in ObatyanListViewModel.instance.obatyans) {
-
-        }*/
-    }
-
 }

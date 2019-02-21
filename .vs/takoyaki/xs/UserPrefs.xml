@@ -1,19 +1,19 @@
 ﻿<Properties StartupConfiguration="{6A52E00F-6B7B-E2C7-B2D0-C0FE4C9A9069}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Application/Scripts/Extension/ArrayExtension.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Application/Scripts/View/ObatyanListView/toziru.cs">
     <Files>
       <File FileName="Assets/Application/Scripts/Model/TakoyakiModel/TakoyakiModel.cs" Line="13" Column="1" />
-      <File FileName="Assets/Application/Scripts/ViewModel/TakoyakiViewModel/TakoyakiViewModel.cs" Line="64" Column="1" />
-      <File FileName="Assets/Application/Scripts/View/TakoyakiView/HoleView.cs" Line="29" Column="49" />
-      <File FileName="Assets/Application/Scripts/View/Attribute/DragAttribute.cs" Line="19" Column="1" />
-      <File FileName="Assets/Application/Scripts/View/Attribute/DropAttribute.cs" Line="12" Column="5" />
-      <File FileName="Assets/Application/Scripts/View/Attribute/FlickAttrubute.cs" Line="30" Column="1" />
       <File FileName="Assets/Application/Scripts/View/Attribute/DragShakeAttribute.cs" Line="60" Column="34" />
       <File FileName="Assets/Application/Scripts/StageManager/PopTakoyakiBall.cs" Line="7" Column="1" />
       <File FileName="Assets/Application/Scripts/Stage/TakoyakiBall.cs" Line="39" Column="45" />
       <File FileName="Assets/Application/Scripts/Stage/ObatyanActor.cs" Line="42" Column="9" />
-      <File FileName="Assets/Application/Scripts/StageManager/ObayanManager.cs" Line="23" Column="66" />
+      <File FileName="Assets/Application/Scripts/Extension/ArrayExtension.cs" Line="11" Column="6" />
       <File FileName="Assets/Application/Scripts/StageManager/StegeObserver.cs" Line="20" Column="9" />
-      <File FileName="Assets/Application/Scripts/Extension/ArrayExtension.cs" Line="1" Column="1" />
+      <File FileName="Assets/Application/Scripts/Model/Obatyan/ObatyanModel.cs" Line="72" Column="18" />
+      <File FileName="Assets/Application/Scripts/StageManager/ObayanManager.cs" Line="9" Column="53" />
+      <File FileName="Assets/Application/Scripts/ViewModel/ObatyanListViewModel/ObatyanListViewModel.cs" Line="31" Column="28" />
+      <File FileName="Assets/Application/Scripts/View/ObatyanListView/ObatyanView.cs" Line="14" Column="21" />
+      <File FileName="Assets/Application/Scripts/View/ObatyanListView/setsumei.cs" Line="19" Column="9" />
+      <File FileName="Assets/Application/Scripts/View/ObatyanListView/toziru.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
