@@ -23,7 +23,7 @@ public class TakoyakiBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnCollisionEnter(Collision collision)
@@ -36,6 +36,7 @@ public class TakoyakiBall : MonoBehaviour
 
     void Hit()
     {
+
         var seq = DOTween.Sequence();
     }
 

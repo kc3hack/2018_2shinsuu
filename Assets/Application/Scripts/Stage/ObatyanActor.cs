@@ -9,13 +9,14 @@ public class ObatyanActor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        DOVirtual.DelayedCall(30f, () => Death());
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Rotate(new Vector3(0, 1, 0), Random.Range(-5.0f, 5.0f));
+        this.transform.Translate(transform.forward * 0.5f);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -36,6 +37,6 @@ public class ObatyanActor : MonoBehaviour
 
     void Death()
     {
-        Destroy(this.gameObject);
+        ObjectPool.instance.ReleaseGameObject(this.gameObject);
     }
 }
