@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObatyanListViewModel : SingletonMonoBehaviour<ObatyanListViewModel>
 {
@@ -44,4 +45,8 @@ public class ObatyanListViewModel : SingletonMonoBehaviour<ObatyanListViewModel>
         obatyanView.init();
     }
 
+    public void MainScene()
+    {
+        SceneManager.LoadScene("MainView");
+    }
 }

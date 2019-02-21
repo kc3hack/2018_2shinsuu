@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UniRx;
 using UniRx.Triggers;
+using UnityEngine.SceneManagement;
+
 
 public class TakoyakiViewModel : SingletonMonoBehaviour<TakoyakiViewModel>{
 
@@ -61,6 +63,11 @@ public class TakoyakiViewModel : SingletonMonoBehaviour<TakoyakiViewModel>{
         takoyaki.bakeState = TakoyakiModel.BakeState.blank;
         takoyaki.isInTako = false;
         takoyaki.bakeTime = 0f;
+    }
+
+    public void ZukanScene()
+    {
+        SceneManager.LoadScene("hn");
     }
 
 }

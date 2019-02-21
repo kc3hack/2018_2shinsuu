@@ -37,7 +37,6 @@ public class TakoyakiBall : MonoBehaviour
     void Hit()
     {
         rigidbody.angularVelocity = Vector3.zero;
-        var mat = GetComponent<Renderer>().material;
         var seq = DOTween.Sequence();
         seq.Append(transform.DOScale(Vector3.zero, 0.5f));
         seq.OnComplete(() => Death());
