@@ -11,6 +11,8 @@ public class TakoyakiViewModel : SingletonMonoBehaviour<TakoyakiViewModel>{
                                         new TakoyakiModel(),new TakoyakiModel(),new TakoyakiModel()};
     public GameObject tepan;
     public HoleView holeViewPrefab;
+    public AudioSource audioSource;
+
     
     // Start is called before the first frame update
     void Start(){
@@ -56,6 +58,7 @@ public class TakoyakiViewModel : SingletonMonoBehaviour<TakoyakiViewModel>{
 
     public void Shot(Vector3 acceleration, TakoyakiModel takoyaki) {
         if(takoyaki.bakeState == TakoyakiModel.BakeState.medium && takoyaki.isInTako){
+            GetComponent<AudioSource>().Play();
             PopTakoyakiBall.instance.Shot(acceleration);
         }
         takoyaki.bakeState = TakoyakiModel.BakeState.blank;
