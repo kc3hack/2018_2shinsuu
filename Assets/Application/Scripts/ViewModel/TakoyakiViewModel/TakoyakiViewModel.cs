@@ -21,7 +21,6 @@ public class TakoyakiViewModel : SingletonMonoBehaviour<TakoyakiViewModel>{
     void Update(){
         float bakeTimeLevelMedium = 5.0f;
         float bakeTimeLevelWelldone = 10.0f;
-
         foreach (TakoyakiModel tako in takoyakis) {
             if (tako.bakeState != TakoyakiModel.BakeState.blank) {
                 tako.bakeTime += Time.deltaTime;
@@ -35,8 +34,6 @@ public class TakoyakiViewModel : SingletonMonoBehaviour<TakoyakiViewModel>{
                 }
             }
         }
-
-
     }
 
     public void IntoTakoyakiEki(TakoyakiModel t) {
@@ -44,6 +41,10 @@ public class TakoyakiViewModel : SingletonMonoBehaviour<TakoyakiViewModel>{
             t.bakeState = TakoyakiModel.BakeState.rare;
             t.bakeTime = 0f;
          }
+    }
+
+    public void IntoTako(TakoyakiModel t){
+        t.isInTako = true;
     }
 
 

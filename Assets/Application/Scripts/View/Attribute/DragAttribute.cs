@@ -17,9 +17,6 @@ public class DragAttribute : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [System.NonSerialized]
     public bool isDraging = false;
 
-    [SerializeField, HeaderAttribute("ドロップされた際のイベント")]
-    public UnityEvent DropedEvent;
-
     // Use this for initialization
     void Start(){
         myRect = GetComponent<RectTransform>();
@@ -43,8 +40,7 @@ public class DragAttribute : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
         draggingObject.transform.position = eventData.position;
     }
 
-    public void OnEndDrag(PointerEventData eventData)
-    {
+    public void OnEndDrag(PointerEventData eventData){
         gameObject.GetComponent<Image>().color = Vector4.one;
         Destroy(draggingObject);
         isDraging = false;

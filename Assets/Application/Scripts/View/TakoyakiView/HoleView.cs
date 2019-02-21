@@ -6,7 +6,10 @@ using UniRx;
 
 public class HoleView : MonoBehaviour{
     public TakoyakiModel takoyaki;
+    public DropAttribute dropAttribute;
+    public FlickAttrubute flickAttrubute;
     public Image holeImege;
+    public Image takoImage;
     public Sprite blank;
     public Sprite rare;
     public Sprite medium;
@@ -21,6 +24,12 @@ public class HoleView : MonoBehaviour{
     private void Start(){
         takoyaki.ObserveEveryValueChanged(x => x.bakeState)
                 .Subscribe(_ => this.ChangeSprite());
+
+        takoyaki.ObserveEveryValueChanged(x => x.isInTako)
+                .Subscribe(_ => this.ChengeInTako());
+
+        dropAttribute.dropEventSubject.Subscribe(DropEvent);
+        flickAttrubute.flickEventSubject.Subscribe(FlickEvent);
     }
 
     public void ChangeSprite(){
@@ -42,8 +51,21 @@ public class HoleView : MonoBehaviour{
          }
     }
 
-    public void EkiDropEvent(){
-        TakoyakiViewModel.instance.IntoTakoyakiEki(this.takoyaki);
+    public void ChengeInTako() {
+        takoImage.enabled = takoyaki.isInTako;
+     }
+
+    public void DropEvent(GameObject obj){
+        if (obj.tag == "Eki") {
+            TakoyakiViewModel.instance.IntoTakoyakiEki(this.takoyaki);
+        }
+        else if(obj.tag == "Tako")
+        {
+            TakoyakiViewModel.instance.IntoTako(this.takoyaki);
+        }
     }
 
+    public void FlickEvent(Vector3 acceleration){
+        PopTakoyakiBall.instance.Shot(acceleration);
+    }
 }

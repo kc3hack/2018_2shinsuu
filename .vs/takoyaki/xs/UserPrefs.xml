@@ -1,11 +1,17 @@
 ﻿<Properties StartupConfiguration="{6A52E00F-6B7B-E2C7-B2D0-C0FE4C9A9069}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Application/Scripts/View/Attribute/DragShakeAttribute.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Application/Scripts/Stage/ObatyanActor.cs">
     <Files>
       <File FileName="Assets/Application/Scripts/Model/TakoyakiModel/TakoyakiModel.cs" Line="13" Column="1" />
-      <File FileName="Assets/Application/Scripts/ViewModel/TakoyakiViewModel.cs" Line="45" Column="29" />
-      <File FileName="Assets/Application/Scripts/View/TakoyakiView/HoleView.cs" Line="47" Column="6" />
-      <File FileName="Assets/Application/Scripts/View/Attribute/FlickAttribute.cs" Line="17" Column="1" />
-      <File FileName="Assets/Application/Scripts/View/Attribute/DragShakeAttribute.cs" Line="23" Column="5" />
+      <File FileName="Assets/Application/Scripts/ViewModel/TakoyakiViewModel/TakoyakiViewModel.cs" Line="53" Column="21" />
+      <File FileName="Assets/Application/Scripts/View/TakoyakiView/HoleView.cs" Line="32" Column="64" />
+      <File FileName="Assets/Application/Scripts/View/Attribute/DragAttribute.cs" Line="19" Column="1" />
+      <File FileName="Assets/Application/Scripts/View/Attribute/DropAttribute.cs" Line="13" Column="1" />
+      <File FileName="Assets/Application/Scripts/View/Attribute/FlickAttrubute.cs" Line="30" Column="1" />
+      <File FileName="Assets/Application/Scripts/View/Attribute/DragShakeAttribute.cs" Line="60" Column="34" />
+      <File FileName="Assets/Application/Scripts/StageManager/PopTakoyakiBall.cs" Line="7" Column="1" />
+      <File FileName="Assets/Application/Scripts/StageManager/PopObatyan.cs" Line="8" Column="35" />
+      <File FileName="Assets/Application/Scripts/Stage/TakoyakiBall.cs" Line="25" Column="9" />
+      <File FileName="Assets/Application/Scripts/Stage/ObatyanActor.cs" Line="41" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
