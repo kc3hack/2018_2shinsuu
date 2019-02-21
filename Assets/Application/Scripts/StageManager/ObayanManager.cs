@@ -4,7 +4,7 @@ using UnityEngine;
 using DG.Tweening;
 
 public class ObayanManager : SingletonMonoBehaviour<ObayanManager>{
-    public GameObject obatyanPrefab;
+    public GameObject[] obatyanPrefabs;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class ObayanManager : SingletonMonoBehaviour<ObayanManager>{
 
     void PopObatyan() {
         Vector3 popPoint = new Vector3(Random.Range(-10.0f, 10.0f), 0.5f, Random.Range(-10.0f, 10.0f));
-        var obj = ObjectPool.instance.GetGameObject(obatyanPrefab, new Vector3(0 ,0.5f,0),Quaternion.identity);
+        var obj = ObjectPool.instance.GetGameObject(obatyanPrefabs[UnityEngine.Random.Range(0, obatyanPrefabs.Length)], new Vector3(0 ,0.5f,0),Quaternion.identity);
         obj.transform.localPosition = Vector3.zero;
         obj.transform.localRotation = Quaternion.identity;
         //obj.transform.LookAt(Camera.main.transform);
